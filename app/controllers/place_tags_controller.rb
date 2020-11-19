@@ -1,0 +1,2 @@
+class PlaceTagsController < ApplicationController
+end
