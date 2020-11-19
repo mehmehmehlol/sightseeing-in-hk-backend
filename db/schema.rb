@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_000502) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.text "description"
     t.text "address"
     t.string "phone_number"

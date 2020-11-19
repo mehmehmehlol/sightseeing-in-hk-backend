@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Favorite.delete_all
+PlaceTag.delete_all
+Place.delete_all
+Tag.delete_all
+User.delete_all
+
+
 user1 = User.create(username: "user1", first_name: "United", last_name: "Kingdom", password: "uk")
 user2 = User.create(username: "user2", first_name: "Hong", last_name: "Kong", password: "hk")
 user3 = User.create(username: "user3", first_name: "South", last_name: "Korea", password: "skorea")
@@ -15,7 +22,7 @@ placeArr = [
     {
         id: 1,
         name: "Star Ferry Pier",
-        type: "Attraction",
+        category: "Attraction",
         image: "https://c8.alamy.com/comp/HW008T/the-star-ferry-pier-at-tsim-sha-tsui-with-2-ferries-ready-to-leave-HW008T.jpg",
         description: "
         Hong Kong's famous Star Ferry, with roots dating back to 1880, costs only a few Hong Kong Dollars to ride, making it one of the best deals in all of Hong Kong. Victoria Harbour is a hive of activity, and ships of all shapes and sizes chug, zip, or wallow past as the expert captains of the Star Ferries somehow avoid collisions. As you travel the main route from Kowloon to Hong Kong Island, or more specifically, Tsim Sha Tsui (TST) to Central, it's hard not to be struck by the dense towers of Hong Kong Island, backed by green mountains rising up before you. The breeze off the water is exceptionally refreshing, and the wide-open spaces are a perfect antidote to the tight confines of the city.\n\n
@@ -31,7 +38,7 @@ placeArr = [
     {
         id: 2,
         name: "Victoria Peak (The Peak)",
-        type: "Attraction",
+        category: "Attraction",
         image: "https://www.discoverhongkong.com/content/dam/dhk/intl/explore/neighbourhoods/interactive-map/attractions/the-peak-640x480.jpg",
         description: "
         You haven't seen the best of Hong Kong until you've taken in the skyline from Victoria Peak, more commonly known as The Peak. Ride the tram to the top of this scenic viewpoint to see the skyscrapers, bustling city, harbor, and surrounding islands. The tram station is located near the entrance to Hong Kong Park by the Murray building. At the top of the tram are the Peak Tower and Peak Galleria, with shops, restaurants, and an observation deck. Most of The Peak is covered by a large park with lush greenery, nature trails, and more beautiful lookouts with views over the thriving metropolis below. A trail also leads down from The Peak to the city below, following a mix of trails through the forest and sections of road here and there. It can be a bit confusing finding your way.\n\n
@@ -47,8 +54,8 @@ placeArr = [
     {
         id: 3,
         name: "Wong Tai Sin Temple",
-        type: "Attraction",
-        image: "https://www.planetware.com/photos-large/HK/hong-kong-wong-tai-sin-temple.jpg"
+        category: "Attraction",
+        image: "https://www.planetware.com/photos-large/HK/hong-kong-wong-tai-sin-temple.jpg",
         description: "
         The Wong Tai Sin Temple is one of the newest in Hong Kong and also one of the most interesting. Located in Kowloon, the original temple was a private structure built in 1920. It was later replaced with a newer building in 1968, which is what visitors see today. The temple was built to honor the Taoist god Wong Tai Sin, whom locals regard as the bringer of good luck in horse-racing and a healer of illnesses. A festival is held at the temple in Wong Tai Sin's name each fall.\n\n
 
@@ -63,10 +70,10 @@ placeArr = [
     {
         id: 4,
         name: "Big Buddha (Tian Tan Buddha Statue)",
-        type: "Attraction",
+        category: "Attraction",
         image: "https://www.planetware.com/wpimages/2018/10/hong-kong-attractions-big-buddha-and-forest.jpg",
         description: "
-        The 34-meter-high "Big Buddha" sits above Lantau Island's Po Lin monastery, which was a fairly secluded place until the statue was built in 1993. This is one of the largest Buddha statues of its kind in the world and took 12 years to complete. The size is astounding, both up close and seen from a distance. The setting here is also incredible, surrounded by the green forest and views out over the ocean and islands. Although you can take a bus, the best way to reach the Buddha is via the scenic Ngong Ping cable car, which takes you on a 5.7-kilometer, 25-minute ride over forest, water, and mountains. The ride terminates at the small tourist-focused Ngong Ping Village, which you'll have to walk through before reaching the monastery and Big Buddha. \n\n
+        The 34-meter-high \"Big Buddha\" sits above Lantau Island's Po Lin monastery, which was a fairly secluded place until the statue was built in 1993. This is one of the largest Buddha statues of its kind in the world and took 12 years to complete. The size is astounding, both up close and seen from a distance. The setting here is also incredible, surrounded by the green forest and views out over the ocean and islands. Although you can take a bus, the best way to reach the Buddha is via the scenic Ngong Ping cable car, which takes you on a 5.7-kilometer, 25-minute ride over forest, water, and mountains. The ride terminates at the small tourist-focused Ngong Ping Village, which you'll have to walk through before reaching the monastery and Big Buddha. \n\n
         
         Once through the village, a huge set of stairs leads up to the base, but don't be daunted. The walk up goes quickly, and the views from the base of the statue are well worth the effort. You can access the cable car from the MTR Tung Chung Station. Some people combine a trip to the Big Buddha with a stop at Tai O fishing village, 20 minutes away by bus, but still on Lantau Island. You can also pick up a Hong Kong Travel Pass Combo: MTR Pass, Ngong Ping Cable Car, and Big Buddha Tour, which will give you a one- to three-day MTR Pass %(metro), round-trip cable car ride, and a guided tour of the Big Buddha. This is a good deal if you are planning on getting around by MTR during your stay in Hong Kong.
         ",
@@ -79,12 +86,16 @@ placeArr = [
     {
         id: 5,
         name: "Repulse Bay and the Beaches",
-        type: "Outdoor",
+        category: "Outdoor",
         image: "https://www.planetware.com/wpimages/2018/10/hong-kong-attractions-repulse-bay-beach-afternoon.jpg",
         description: "
-        The 34-meter-high "Big Buddha" sits above Lantau Island's Po Lin monastery, which was a fairly secluded place until the statue was built in 1993. This is one of the largest Buddha statues of its kind in the world and took 12 years to complete. The size is astounding, both up close and seen from a distance. The setting here is also incredible, surrounded by the green forest and views out over the ocean and islands. Although you can take a bus, the best way to reach the Buddha is via the scenic Ngong Ping cable car, which takes you on a 5.7-kilometer, 25-minute ride over forest, water, and mountains. The ride terminates at the small tourist-focused Ngong Ping Village, which you'll have to walk through before reaching the monastery and Big Buddha. \n\n
-        
-        Once through the village, a huge set of stairs leads up to the base, but don't be daunted. The walk up goes quickly, and the views from the base of the statue are well worth the effort. You can access the cable car from the MTR Tung Chung Station. Some people combine a trip to the Big Buddha with a stop at Tai O fishing village, 20 minutes away by bus, but still on Lantau Island. You can also pick up a Hong Kong Travel Pass Combo: MTR Pass, Ngong Ping Cable Car, and Big Buddha Tour, which will give you a one- to three-day MTR Pass %(metro), round-trip cable car ride, and a guided tour of the Big Buddha. This is a good deal if you are planning on getting around by MTR during your stay in Hong Kong.
+        Repulse Bay, located in the southern part of Hong Kong Island, is the most spectacular bay in the region. Its name comes from a 19th century battle in which the British army repulsed attacking pirates. Today, the place is a luxurious residential area for dining, relaxation, and aquatic activities. \n\n
+
+        The beach stretches long with clear azure blue water gently lapping the seashore. Its sand is golden and soft. With water temperatures ranging from 16°C %(60.8°F) to 26°C %(80.6°F) year round, it is a mecca for locals and visitors alike to escape the heat.
+
+        Swimming is obviously popular and the Repulse Bay is outfitted for safety with shark prevention nets and floating platforms. During the summer, lifeguards are on duty.
+
+        Besides aquatic activities, there are extensive facilities for visitors in Repulse Bay. Barbecue racks are available under the shade near the beach. In addition, the area is dotted with hotels, supermarkets, and cafes. A lighthouse near the beach is a popular place to take photos. Watching the sunset is another popular pastime for visitors. The Zhenhai Tower Park, built in the traditional Chinese style, is located near the beach. Huge statues of the Queen of Heaven and the God of Mercy %(Kwan-yin) sit in front of the park.
         ",
         address: "Beach Road, Repulse Bay, Hong Kong Island, Hong Kong",
         website: "www.lcsd.gov.hk/en/beach/index/beach-location-hk/beach-address-south.html",
@@ -95,7 +106,7 @@ placeArr = [
     {
         id: 6,
         name: "Hong Kong Disneyland",
-        type: "Attraction",
+        category: "Attraction",
         image: "https://cdn.cnn.com/cnnnext/dam/assets/171226121501-castle-transformation-0-original.jpg",
         description: "
         Hong Kong Disneyland is located on Lantau Island. Here, you'll find a wonderful world filled with fun and fantasy populated with the cast and characters from Disney movies. The park is divided into seven lands: Adventureland; Fantasyland; Toy Story Land; Tomorrowland; Grizzly Gulch; Mystic Point; and Main Street, U.S.A. Performances happen throughout the day in the various lands and feature everything from parades to musicals, right through to evening fireworks over the castle. Also on offer are a wide array of adventures, ranging from Jungle cruises to a trip to Tarzan's Treehouse, as well as water-based fun at Liki Tiki. \n\n
@@ -111,7 +122,7 @@ placeArr = [
     {
         id: 7,
         name: "Temple Street Night Market",
-        type: "Shopping",
+        category: "Shopping",
         image: "https://www.discoverhongkong.com/content/dam/dhk/intl/explore/neighbourhoods/interactive-map/shops/temple-street-night-market-640x480.jpg",
         description: "
         A stroll through the Temple Street Night Market is another one of those all-important things to do while you're in Hong Kong. Located in Kowloon, this is the place to go to taste eclectic foods and to shop for bargains on everything from clothing and trinkets to electronics and household goods. Vendors sell gadgets of every shape and size, as well as jade jewelry and traditional Chinese crafts. The market gets going around 6pm, but vendors are often slow to get set up, so it's best not to arrive too early. This is the best market for tourists in Hong Kong, but you can find a number of interesting street markets. See our article on Hong Kong street markets to learn about markets to explore by day. The MTR stop for the Temple Street Night Mark is Jordan Station, Exit A.
@@ -125,7 +136,7 @@ placeArr = [
     {
         id: 8,
         name: "Dragon's Back Hike",
-        type: "Outdoor",
+        category: "Outdoor",
         image: "https://www.planetware.com/wpimages/2018/10/hong-kong-attractions-dragons-back-hike-with-hikers-2.jpg",
         description: "
         If you've had enough of the tight confines of Hong Kong and are ready for a little exercise, try escaping to the Dragon's Back Hike. Hong Kong's most popular hiking trail, this hike offers spectacular views out over the ocean, Big Wave Bay, Mount Collinson, Stanley, and Shek O. It's a pleasant change from the buzz of the big city to hear birds singing, the sound of small waterfalls, and the leaves rattling in the ocean breeze.\n\n
@@ -141,7 +152,7 @@ placeArr = [
     {
         id: 9,
         name: "Lan Kwai Fong",
-        type: "Nightlife",
+        category: "Nightlife",
         image: "https://www.planetware.com/wpimages/2018/10/hong-kong-attractions-lan-kwai-fong-sign.jpg",
         description: "
         As Hong Kong's most popular dining area, the lively streets that make up Lan Kwai Fong are packed with crowds checking out Hong Kong's trendiest restaurants. If you are looking for a place to eat in Hong Kong, especially at night, this is the place to come. Dining on the open-air patios lining the sidewalks and watching the crowds stroll by is a fun endeavor. In addition to the street level establishments, you'll find restaurants are literally stacked upon one another in the buildings along here. Be sure to check out the directories located at the main entrances. You can find cuisine from around the world. For a dependably good meal, try Bistecca %(Italian) or Brickhouse %(Mexican).\n\n
@@ -157,7 +168,7 @@ placeArr = [
     {
         id: 10,
         name: "Garden of Stars (Avenue of Stars)",
-        type: "Attraction",
+        category: "Attraction",
         image: "https://www.planetware.com/wpimages/2018/10/hong-kong-attractions-garden-of-stars-statue-2.jpg",
         description: "
         While in Tsim Sha Tsui, be sure to visit the Garden of Stars. This is where the city pays homage to some of Hong Kong's best known film stars. Similar to the Walk of Fame in Hollywood, the Garden of Stars features stars dedicated to Chinese performers. You can see handprints of some of these famous people, like martial arts great Bruce Lee, displayed on plaques.\n\n
@@ -173,7 +184,7 @@ placeArr = [
     {
         id: 11,
         name: "Australia Dairy Company",
-        type: "Dining",
+        category: "Dining",
         image: "https://1zq4u3t0dfc2un92q3bhd1mt-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/australia_dairy_company_hong_kong.jpg",
         description: "
         It may not look like much but Australia Dairy Company is one of Hong Kong’s most popular 'cha chaan teng' cafes. No one does eggs better. The breakfast set consists of fluffy and moist scrambled eggs served with rich buttery thick toast, a plate of macaroni and char siu in chicken broth. Australia Dairy Company also specialises in steamed milk pudding and custard dishes. Whatever you choose, just make sure you order fast, eat fast and leave fast as there’s almost always a queue of people waiting.
@@ -187,7 +198,7 @@ placeArr = [
     {
         id: 12,
         name: "Dragon Centre",
-        type: "Shopping",
+        category: "Shopping",
         image: "https://static.thehoneycombers.com/wp-content/uploads/sites/6/2018/11/Dragon-Centre-Sham-Shui-Po-exterior.jpg",
         description: "
         Dragon Centre strategically located at the heart of West Kowloon. With a population of over 7 million, the customer potential of the nearby district is way beyond your imagination. The total area of Dragon Centre tops the leaderboard in the district, and is the home of more than 700 shops. Dragon Centre − the best place to start your retail business.\n\n
@@ -203,7 +214,7 @@ placeArr = [
     {
         id: 13,
         name: "Golden Computer Arcade",
-        type: "Shopping",
+        category: "Shopping",
         image: "https://www.nextstophongkong.com/wp-content/uploads/2014/04/Golden-Computer-Arcade-Hong-Kong.jpg",
         description: "
         Golden Computer Arcade, or “Golden”, as the locals refer to it, has become synonymous with PC building in Hong Kong. The computer center is a haven for those looking for quality desktop computer parts, peripherals and other small accessories for tech at discounted prices. No matter what kind of processors, graphics cards, RAM, and other items you’re looking for, you’re guaranteed to find a good deal given the sheer amount of shops crammed within the complex.
@@ -217,7 +228,7 @@ placeArr = [
     {
         id: 14,
         name: "Cheung Fat Noodles",
-        type: "Dining",
+        category: "Dining",
         image: "https://www.nextstophongkong.com/wp-content/uploads/2014/04/Golden-Computer-Arcade-Hong-Kong.jpg",
         description: "
         The large colourful menu on the wall shows but a few options: noodles, noodles with pork knuckle, fish balls, and fish balls with noodles. But that’s okay – because Cheung Fat is famous for these classic dishes. Middle-aged locals and the odd Filipino maid pack into this pavement stall to enjoy the toothsome noodles – made with “special” %(MSG-laden) soy sauce and yummy pork fat. 
@@ -231,7 +242,7 @@ placeArr = [
 ]
     
 placeArr.each{ |p| 
-    place = Place.find_or_create_by(name: p[:name], type: p[:type], image: p[:image], description: p[:description], address: p[:address], website: p[:website], phone_number: p[:phone_number], latitude: p[:latitude], longitude: p[:longitude])
+    place = Place.find_or_create_by(id: p[:id], name: p[:name], category: p[:category], image: p[:image], description: p[:description], address: p[:address], website: p[:website], phone_number: p[:phone_number], latitude: p[:latitude], longitude: p[:longitude])
 }
 
 fav1 = Favorite.create(user_id: user1.id, place_id: 1)
@@ -254,7 +265,22 @@ tag4 = Tag.create(name: "Features")
 tag5 = Tag.create(name: "Attractions")
 tag6 = Tag.create(name: "Classics")
 tag7 = Tag.create(name: "Food")
+tag8 = Tag.create(name: "Shopping")
+tag9 = Tag.create(name: "Outdoor")
+tag10 = Tag.create(name: "Nature")
+tag11 = Tag.create(name: "Nightlife")
 
 pt1 = PlaceTag.create(place_id: 1, tag_id: tag1.id)
+pt2 = PlaceTag.create(place_id: 1, tag_id: tag3.id)
+pt3 = PlaceTag.create(place_id: 2, tag_id: tag3.id)
+pt4 = PlaceTag.create(place_id: 2, tag_id: tag5.id)
+pt5 = PlaceTag.create(place_id: 7, tag_id: tag8.id)
+pt6 = PlaceTag.create(place_id: 7, tag_id: tag5.id)
+pt7 = PlaceTag.create(place_id: 8, tag_id: tag9.id)
+pt8 = PlaceTag.create(place_id: 8, tag_id: tag10.id)
+pt9 = PlaceTag.create(place_id: 9, tag_id: tag1.id)
+pt10 = PlaceTag.create(place_id: 9, tag_id: tag11.id)
+pt11 = PlaceTag.create(place_id: 11, tag_id: tag7.id)
+pt12 = PlaceTag.create(place_id: 11, tag_id: tag2.id)
 
-
+puts "seed done"
