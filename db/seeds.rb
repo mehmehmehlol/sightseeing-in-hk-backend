@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+user1 = User.create(username: "user1", first_name: "United", last_name: "Kingdom", password: "uk")
+user2 = User.create(username: "user2", first_name: "Hong", last_name: "Kong", password: "hk")
+user3 = User.create(username: "user3", first_name: "South", last_name: "Korea", password: "skorea")
+
+
 placeArr = [
     {
         id: 1,
@@ -173,13 +178,83 @@ placeArr = [
         description: "
         It may not look like much but Australia Dairy Company is one of Hong Kong’s most popular 'cha chaan teng' cafes. No one does eggs better. The breakfast set consists of fluffy and moist scrambled eggs served with rich buttery thick toast, a plate of macaroni and char siu in chicken broth. Australia Dairy Company also specialises in steamed milk pudding and custard dishes. Whatever you choose, just make sure you order fast, eat fast and leave fast as there’s almost always a queue of people waiting.
         ",
-        address: "47-49 Parkes Street, Kowloon, Hong Kong",
+        address: "47-49 Parkes Street, Jordan, Kowloon, Hong Kong",
         website: "https://www.thetravelmentor.com/2019/03/australia-dairy-company-best-scrambled-eggs-hong-kong/",
         phone_number: "+852 2730 1356",
         latitude: "22.304596° N",
         longitude: "114.170517° E"
     }, 
-
-    
+    {
+        id: 12,
+        name: "Dragon Centre",
+        type: "Shopping",
+        image: "https://static.thehoneycombers.com/wp-content/uploads/sites/6/2018/11/Dragon-Centre-Sham-Shui-Po-exterior.jpg",
+        description: "
+        Dragon Centre strategically located at the heart of West Kowloon. With a population of over 7 million, the customer potential of the nearby district is way beyond your imagination. The total area of Dragon Centre tops the leaderboard in the district, and is the home of more than 700 shops. Dragon Centre − the best place to start your retail business.\n\n
+        
+        As the first nine-story shopping centre in Hong Kong, Dragon Centre owns a total retail floor area of 840, 000 square meters. In 2004, Dragon Centre won the Certificate of Merit issued by Hong Kong Institute of Architects for its outstanding architectural design. Dragon Centre is the proud owner of an indoor ice skating rink, an arcade centre and the largest number of sales kiosk in Hong Kong. Apple Mall has a mega collection of chic knick knacks and accessories and is especially for ladies. With regular promotions, Dragon Centre will be your ideal place for dining, leisure and relaxation.
+        ",
+        address: "37k Yen Chow Street, Sham Shui Po, Kowloon, Hong Kong",
+        website: "http://www.dragoncentre.com.hk/index",
+        phone_number: "+852 2360 0982",
+        latitude: "22.3311° N",
+        longitude: "114.1598° E"
+    },
+    {
+        id: 13,
+        name: "Golden Computer Arcade",
+        type: "Shopping",
+        image: "https://www.nextstophongkong.com/wp-content/uploads/2014/04/Golden-Computer-Arcade-Hong-Kong.jpg",
+        description: "
+        Golden Computer Arcade, or “Golden”, as the locals refer to it, has become synonymous with PC building in Hong Kong. The computer center is a haven for those looking for quality desktop computer parts, peripherals and other small accessories for tech at discounted prices. No matter what kind of processors, graphics cards, RAM, and other items you’re looking for, you’re guaranteed to find a good deal given the sheer amount of shops crammed within the complex.
+        ",
+        address: "Golden Building, Fuk Wa St, Sham Shui Po, Kowloon, Hong Kong",
+        website: "",
+        phone_number: "+852 2728 7399",
+        latitude: "22.3318° N",
+        longitude: "114.1623° E"
+    },
+    {
+        id: 14,
+        name: "Cheung Fat Noodles",
+        type: "Dining",
+        image: "https://www.nextstophongkong.com/wp-content/uploads/2014/04/Golden-Computer-Arcade-Hong-Kong.jpg",
+        description: "
+        The large colourful menu on the wall shows but a few options: noodles, noodles with pork knuckle, fish balls, and fish balls with noodles. But that’s okay – because Cheung Fat is famous for these classic dishes. Middle-aged locals and the odd Filipino maid pack into this pavement stall to enjoy the toothsome noodles – made with “special” %(MSG-laden) soy sauce and yummy pork fat. 
+        ",
+        address: "1 Yiu Tung Street, Sham Shui Po, Kowloon, Hong Kong",
+        website: "https://www.openrice.com/en/hongkong/r-cheung-fat-noodles-sham-shui-po-hong-kong-style-noodles-rice-noodles-r500252",
+        phone_number: "+852 2777 2400",
+        latitude: "22.331494° N",
+        longitude: "114.165508° E"
+    }
 ]
+    
+placeArr.each{ |p| 
+    place = Place.find_or_create_by(name: p[:name], type: p[:type], image: p[:image], description: p[:description], address: p[:address], website: p[:website], phone_number: p[:phone_number], latitude: p[:latitude], longitude: p[:longitude])
+}
+
+fav1 = Favorite.create(user_id: user1.id, place_id: 1)
+fav2 = Favorite.create(user_id: user1.id, place_id: 3)
+fav3 = Favorite.create(user_id: user1.id, place_id: 4)
+fav4 = Favorite.create(user_id: user1.id, place_id: 7)
+fav5 = Favorite.create(user_id: user2.id, place_id: 7)
+fav6 = Favorite.create(user_id: user2.id, place_id: 10)
+fav7 = Favorite.create(user_id: user2.id, place_id: 1)
+fav8 = Favorite.create(user_id: user2.id, place_id: 5)
+fav9 = Favorite.create(user_id: user3.id, place_id: 14)
+fav10 = Favorite.create(user_id: user3.id, place_id: 11)
+fav11 = Favorite.create(user_id: user3.id, place_id: 6)
+fav12 = Favorite.create(user_id: user3.id, place_id: 8)
+
+tag1 = Tag.create(name: "Entertainment")
+tag2 = Tag.create(name: "Local life")
+tag3 = Tag.create(name: "Must Do")
+tag4 = Tag.create(name: "Features")
+tag5 = Tag.create(name: "Attractions")
+tag6 = Tag.create(name: "Classics")
+tag7 = Tag.create(name: "Food")
+
+pt1 = PlaceTag.create(place_id: 1, tag_id: tag1.id)
+
 
