@@ -13,9 +13,9 @@ Tag.delete_all
 User.delete_all
 
 
-user1 = User.create(username: "user1", first_name: "United", last_name: "Kingdom", password: "uk")
-user2 = User.create(username: "user2", first_name: "Hong", last_name: "Kong", password: "hk")
-user3 = User.create(username: "user3", first_name: "South", last_name: "Korea", password: "skorea")
+user1 = User.create(username: "user1", first_name: "United", last_name: "Kingdom", password: "uk", password_confirmation: "uk")
+user2 = User.create(username: "user2", first_name: "Hong", last_name: "Kong", password: "hk", password_confirmation: "hk")
+user3 = User.create(username: "user3", first_name: "South", last_name: "Korea", password: "skorea", password_confirmation: "skorea")
 
 
 placeArr = [
