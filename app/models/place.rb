@@ -4,4 +4,6 @@ class Place < ApplicationRecord
 
     has_many :place_tags
     has_many :tags, through: :place_tags
+
+    # accepts_nested_attributes_for :location
 end

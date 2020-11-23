@@ -32,8 +32,8 @@ placeArr = [
         address: "Star Ferry Pier, Tsim Sha Tsui, Kowloon / Central Pier, Central, Hong Kong Island / Wan Chai Ferry Pier, Wan Chai, Hong Kong Island",
         website: "www.starferry.com.hk/en/home",
         phone_number: "+852 2367 7065",
-        latitude: "22.2938° N",
-        longitude: "114.1687° E"
+        latitude: 22.2938,
+        longitude: 114.1687
     },
     {
         id: 2,
@@ -48,8 +48,8 @@ placeArr = [
         address: "No.1 Lugard Road, Hong Kong",
         website: "https://www.thepeak.com.hk/en",
         phone_number: "+852 2522 0922",
-        latitude: "22.2759° N",
-        longitude: "114.1455° E"
+        latitude: 22.2759,
+        longitude: 114.1455
     },
     {
         id: 3,
@@ -64,8 +64,8 @@ placeArr = [
         address: "2 Chuk Yuen Village, Wong Tai Sin, Hong Kong",
         website: "http://www1.siksikyuen.org.hk/en/siksikyuen-home",
         phone_number: "+852 2327 8141",
-        latitude: "22.3427° N",
-        longitude: "114.1933° E"
+        latitude: 22.3427,
+        longitude: 114.1933
     }, 
     {
         id: 4,
@@ -80,8 +80,8 @@ placeArr = [
         address: "Po Lin Monastery, Ngong Ping, Lantau Island, Hong Kong",
         website: "http://www.plm.org.hk/eng/home.php",
         phone_number: "+852 2985 5248",
-        latitude: "22.2540° N",
-        longitude: "113.9050° E"
+        latitude: 22.2540,
+        longitude: 113.9050
     }, 
     {
         id: 5,
@@ -100,8 +100,8 @@ placeArr = [
         address: "Beach Road, Repulse Bay, Hong Kong Island, Hong Kong",
         website: "www.lcsd.gov.hk/en/beach/index/beach-location-hk/beach-address-south.html",
         phone_number: "+852 2812 2483",
-        latitude: "22.1330° N",
-        longitude: "114.1160° E"
+        latitude: 22.1330,
+        longitude: 114.1160
     }, 
     {
         id: 6,
@@ -116,8 +116,8 @@ placeArr = [
         address: "Lantau Island, Hong Kong",
         website: "https://www.hongkongdisneyland.com/",
         phone_number: "",
-        latitude: "22.3130° N",
-        longitude: "114.0413° E"
+        latitude: 22.3130,
+        longitude: 114.0413
     }, 
     {
         id: 7,
@@ -130,8 +130,8 @@ placeArr = [
         address: "Temple Street, Yau Ma Tei, Kowloon, Hong Kong",
         website: "",
         phone_number: "",
-        latitude: "22.3065° N",
-        longitude: "114.1700° E"
+        latitude: 22.3065,
+        longitude: 114.1700
     }, 
     {
         id: 8,
@@ -146,8 +146,8 @@ placeArr = [
         address: "Shek O, Hong Kong",
         website: "https://www.discoverhongkong.com/us/explore/great-outdoor/dragons-back.html",
         phone_number: "",
-        latitude: "22.2361° N",
-        longitude: "114.2434° E"
+        latitude: 22.2361,
+        longitude: 114.2434
     }, 
     {
         id: 9,
@@ -162,8 +162,8 @@ placeArr = [
         address: "1 Lan Kwai Fong, Central, Hong Kong",
         website: "https://www.lankwaifong.com/",
         phone_number: "",
-        latitude: "22.2811° N",
-        longitude: "114.1555° E"
+        latitude: 22.2811,
+        longitude: 114.1555
     }, 
     {
         id: 10,
@@ -178,8 +178,8 @@ placeArr = [
         address: "3 Hoi Bun Rd, Tsim Sha Tsui, Kowloon,Hong Kong",
         website: "https://www.discoverhongkong.com/uk/explore/attractions/get-ready-to-be-dazzled-by-hong-kong-s-avenue-of-stars.html",
         phone_number: "",
-        latitude: "22.2965° N",
-        longitude: "114.1759° E"
+        latitude: 22.2965,
+        longitude: 114.1759
     }, 
     {
         id: 11,
@@ -192,8 +192,8 @@ placeArr = [
         address: "47-49 Parkes Street, Jordan, Kowloon, Hong Kong",
         website: "https://www.thetravelmentor.com/2019/03/australia-dairy-company-best-scrambled-eggs-hong-kong/",
         phone_number: "+852 2730 1356",
-        latitude: "22.304596° N",
-        longitude: "114.170517° E"
+        latitude: 22.304596,
+        longitude: 114.170517
     }, 
     {
         id: 12,
@@ -208,8 +208,8 @@ placeArr = [
         address: "37k Yen Chow Street, Sham Shui Po, Kowloon, Hong Kong",
         website: "http://www.dragoncentre.com.hk/index",
         phone_number: "+852 2360 0982",
-        latitude: "22.3311° N",
-        longitude: "114.1598° E"
+        latitude: 22.3311,
+        longitude: 114.1598
     },
     {
         id: 13,
@@ -222,8 +222,8 @@ placeArr = [
         address: "Golden Building, Fuk Wa St, Sham Shui Po, Kowloon, Hong Kong",
         website: "",
         phone_number: "+852 2728 7399",
-        latitude: "22.3318° N",
-        longitude: "114.1623° E"
+        latitude: 22.3318,
+        longitude: 114.1623
     },
     {
         id: 14,
@@ -236,8 +236,9 @@ placeArr = [
         address: "1 Yiu Tung Street, Sham Shui Po, Kowloon, Hong Kong",
         website: "https://www.openrice.com/en/hongkong/r-cheung-fat-noodles-sham-shui-po-hong-kong-style-noodles-rice-noodles-r500252",
         phone_number: "+852 2777 2400",
-        latitude: "22.331494° N",
-        longitude: "114.165508° E"
+        latitude: 22.331494,
+        longitude: 114.165508
+        
     }
 ]
     

@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2020_11_19_000502) do
     t.text "address"
     t.string "phone_number"
     t.string "website"
-    t.string "latitude"
-    t.string "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

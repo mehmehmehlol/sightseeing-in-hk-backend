@@ -7,8 +7,8 @@ class CreatePlaces < ActiveRecord::Migration[6.0]
       t.text :address
       t.string :phone_number
       t.string :website
-      t.string :latitude
-      t.string :longitude
+      t.float :latitude
+      t.float :longitude
       t.string :image
 
       t.timestamps
