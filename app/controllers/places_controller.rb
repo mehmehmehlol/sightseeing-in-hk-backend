@@ -1,22 +1,13 @@
 class PlacesController < ApplicationController
     def index
         places = Place.all
-        render json: places
+        render json: places.to_json(include: :tags, except: [:created_at, :updated_at])
     end
 
-    # private
+    def show
+        place = Place.find(params[:id])
+        render json: place
+    end
 
-        # def place_params
-        #     params.require(:place).permit(:name, :)
-        # end
-    #     t.string :name
-    #   t.string :category
-    #   t.text :description
-    #   t.text :address
-    #   t.string :phone_number
-    #   t.string :website
-    #   t.string :latitude
-    #   t.string :longitude
-    #   t.string :image
 
 end

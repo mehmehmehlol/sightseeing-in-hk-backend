@@ -13,9 +13,9 @@ Tag.delete_all
 User.delete_all
 
 
-user1 = User.create(username: "user1", first_name: "United", last_name: "Kingdom", password: "uk", password_confirmation: "uk")
-user2 = User.create(username: "user2", first_name: "Hong", last_name: "Kong", password: "hk", password_confirmation: "hk")
-user3 = User.create(username: "user3", first_name: "South", last_name: "Korea", password: "skorea", password_confirmation: "skorea")
+user1 = User.create(username: "user1", first_name: "United", last_name: "Kingdom", password: "uk")
+user2 = User.create(username: "user2", first_name: "Hong", last_name: "Kong", password: "hk")
+user3 = User.create(username: "user3", first_name: "South", last_name: "Korea", password: "skorea")
 
 
 placeArr = [
@@ -30,7 +30,7 @@ placeArr = [
         Don't worry about scheduling a time to ride the ferry, they leave every few minutes all day long and later into the evening, so it's always easy to get a great seat in the front or along the rail. The return trip from Central to Tsim Sha Tsui is also just as impressive. If you time it right in the evening, you can catch the full splendor of the A Symphony of Lights show. The 360-degree spectacle of laser beams striking the skyscrapers on either side of the harbor is one of the city's free attractions and one of the most popular things to do at night in Hong Kong.
         ",
         address: "Star Ferry Pier, Tsim Sha Tsui, Kowloon / Central Pier, Central, Hong Kong Island / Wan Chai Ferry Pier, Wan Chai, Hong Kong Island",
-        website: "www.starferry.com.hk/en/home",
+        website: "http://www.starferry.com.hk/en/home",
         phone_number: "+852 2367 7065",
         latitude: 22.2938,
         longitude: 114.1687
@@ -229,7 +229,7 @@ placeArr = [
         id: 14,
         name: "Cheung Fat Noodles",
         category: "Dining",
-        image: "https://www.nextstophongkong.com/wp-content/uploads/2014/04/Golden-Computer-Arcade-Hong-Kong.jpg",
+        image: "https://static5.orstatic.com/userphoto2/photo/1D/12YS/07P3EOC24E47B2F1F7E73Epx.jpg",
         description: "
         The large colourful menu on the wall shows but a few options: noodles, noodles with pork knuckle, fish balls, and fish balls with noodles. But that’s okay – because Cheung Fat is famous for these classic dishes. Middle-aged locals and the odd Filipino maid pack into this pavement stall to enjoy the toothsome noodles – made with “special” %(MSG-laden) soy sauce and yummy pork fat. 
         ",
