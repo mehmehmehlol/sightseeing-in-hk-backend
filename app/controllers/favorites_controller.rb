@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
 
     def index
         favorites = Favorite.all
-        render json: favorites
+        render json: favorites.to_json(include: :place, :user)
     end
 
     def create
@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
         else
             new_favorite = favorite_params
         end
-        render json: new_favorite
+        render json: new_favorite.to_json(include: :place, :user)
     end
 
     def destroy
