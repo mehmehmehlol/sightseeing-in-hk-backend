@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
         else
             new_favorite = favorite_params
         end
-        render json: new_favorite.to_json(include: :place, except: [:user_id, :place_id, :created_at, :updated_at])
+        render json: new_favorite.to_json(include: :place, except: [:user_id, :created_at, :updated_at])
     end
 
     def destroy
