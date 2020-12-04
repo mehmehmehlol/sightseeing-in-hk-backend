@@ -7,4 +7,6 @@ class FavoriteSerializer
       {:fav_id => object.id}.merge(object.place.attributes)
   end
 
+  
+
 end

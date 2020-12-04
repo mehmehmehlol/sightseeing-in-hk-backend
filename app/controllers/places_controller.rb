@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
     def index
         places = Place.all
-        render json: places.to_json(include: :tags, except: [:created_at, :updated_at])
+        render json: places
     end
 
     def show
