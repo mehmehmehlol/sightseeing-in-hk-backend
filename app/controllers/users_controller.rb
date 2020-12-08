@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     def update 
         @user = User.find_by_id(params[:id])
         @user.update(user_params)
-        byebug
+        # byebug
         if @user.valid?
             payload = {user_id: @user.id}
             token = encode_token(payload)
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
     def profile
         render json: {user: UserSerializer.new(current_user)}, status: :accepted
-        end
+    end
 
     def destroy
         user = User.find(params[:id])
