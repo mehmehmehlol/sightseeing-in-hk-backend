@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
   resources :place_tags, only: [:create]
   resources :tags, only: [:index]
   resources :favorites, only: [:index, :create, :destroy]
