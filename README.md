@@ -1,24 +1,30 @@
-# README
+Sightseeing in Hong Kong (Backend)
+====
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Objectives
 
-Things you may want to cover:
+This project is designed for users to enjoy a one-stop service to visit all the popular places in Hong Kong. Users can also customize their experience by creating an account and favorite places.
 
-* Ruby version
+## Motivations
 
-* System dependencies
+I wrote a >40page Google Doc for a friend who was visiting Hong Kong in summer 2018. As much as I like planning and recommending places for my friends, I wanted to make the documents into something more abstract and creative. Now that I have possessed web development skills, I decided to transform that Google Doc into a website. A user-friendly and simplistic looking website. 
 
-* Configuration
+## Techology Used
 
-* Database creation
+- [Frontend](https://github.com/mehmehmehlol/sightseeing-in-hk-client): ReactJS 
+    - Library used: react-slideshow-image (for slideshows on Home page)
+    - Google Maps API
+    - styled-components (light and dark theme)
+- Backend: Ruby on Rails 
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+- Clone this repository
+- Redirect to and clone backend repo 
+- Run `rails s` to run the backend server in the terminal of backend folder 
+- Run `npm i` to install all dependencies
+- Run `npm start` to start "localhost:3000"
 
-* Services (job queues, cache servers, search engines, etc.)
+## Created By
 
-* Deployment instructions
-
-* ...
+[Megan Lo](https://github.com/mehmehmehlol)
