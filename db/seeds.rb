@@ -353,7 +353,7 @@ placeArr = [
         id: 26,
         name: "Kowloon Walled City Park",
         category: "Attraction",
-        image: "https://www-origin.discoverhongkong.com/nz/images/see-do/culture-heritage/large/1.4.5.2.4-Kowloon-Walled-City-Park_03.jpg",
+        image: "https://media.cntraveler.com/photos/5a85e352fe6fd1553e242534/16:9/w_2560%2Cc_limit/Kowloon-Walled-City_2018Kowloon-Walled-City.jpg",
         description: "The Kowloon Walled City Park is a historical park in Kowloon City, Kowloon, Hong Kong. The Kowloon Walled City had been a military stronghold since 15th century due to its coastal location and was a centre of vice and crime until 1987.",
         address: "Kowloon City, Hong Kong",
         website: "https://www.lcsd.gov.hk/en/parks/kwcp/index.html",
